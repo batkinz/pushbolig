@@ -4,17 +4,14 @@
  * 
  */
 var requestLib = require("request");
+var urlLib = require("url");
 
 function request(opts, callback) {
-    var formData = {
-        serviceName: "getProperties",
-        data: JSON.stringify(opts)
-    };
-
-    requestLib.post({
-        url: "http://www.boligportal.dk/api/soeg_leje_bolig.php",
-        form: formData
-    }, function(err, response, body) {
+    requestLib(urlLib.format({
+        protocol: "http",
+        host: "www.boligportal.dk/RAP/ads/",
+        query: opts
+    }), function(err, response, body) {
         if (err) {
             callback(err);
         } else {

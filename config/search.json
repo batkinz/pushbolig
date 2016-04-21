@@ -1,21 +1,14 @@
 {
-    "rooms": {
-        "minimum": 3
-    },
-    "rent": {
-        "minimum": 10000,
-        "maximum": 17000
-    },
-    "size": {
-        "minimum": 90,
-        "maximum": 160
-    },
-    "postcodes": [1000, 1500, 1800, 2000, 2100, 2200, 2450, 2500],
-    "furnished": false,
-    "length_of_rental": {
-        "2-12 months": false,
-        "1-2 years": true,
-        "2+ years": true,
-        "unlimited": true
+    "maxRent": 8000,
+    "housingTypes": 3,
+    "minRentalPeriod": 2,
+    "minLat": "55.4856",
+    "minLng": "12.2925",
+    "maxLat": "55.7554",
+    "maxLng": "12.8199",
+    "custom": {
+        "excludedPhrases": ["kollegie", "pendler", "CVR", "ungdom"],
+        "maxDaysFromCreation": 2,
+        "loopIntervalMinutes": 50
     }
 }

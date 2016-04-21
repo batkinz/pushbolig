@@ -6,6 +6,8 @@ var db = new Datastore({
     autoload: true
 });
 
+db.remove({}, { multi: true }, function (err, numRemoved) {});
+
 module.exports = {
     isInDB: function isInDB(thing, nope, yup, oops) {
         db.find(thing, function(err, docs) {

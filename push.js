@@ -9,10 +9,8 @@
  *
  */
 var PushBullet = require('pushbullet');
-var keyring = require('keyring');
-var keyringApi = keyring.instance().load();
 
-var pusher = new PushBullet(keyringApi.retrieve('pushbullet.accessToken'));
+var pusher = new PushBullet('');
 
 var typesToSendTo = require("./config/types_to_send_to.json");
 
